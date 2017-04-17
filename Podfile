@@ -7,4 +7,5 @@ pod 'Alamofire'
 pod 'RxSwift', '~> 3.0'
 pod 'SQLite.swift'
 pod 'SnapKit', '~> 3.2.0'
+pod 'StarWars', '~> 2.0'
 end

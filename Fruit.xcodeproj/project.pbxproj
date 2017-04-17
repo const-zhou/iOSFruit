@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034CDBBF1E953D61003D8961 /* FruitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034CDBBE1E953D61003D8961 /* FruitDetailViewController.swift */; };
+		035089D71E8961A900742DCE /* FruitEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035089D61E8961A900742DCE /* FruitEntity.swift */; };
+		035089D91E8963B300742DCE /* EntityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035089D81E8963B300742DCE /* EntityHelper.swift */; };
+		03682B931E8AA0F700E4D0F9 /* CardCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03682B921E8AA0F700E4D0F9 /* CardCollectionFlowLayout.swift */; };
+		03682B951E8AA50700E4D0F9 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03682B941E8AA50700E4D0F9 /* CardCollectionViewCell.swift */; };
 		039E63211E894EED00328A1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039E63201E894EED00328A1E /* AppDelegate.swift */; };
 		039E63231E894EED00328A1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039E63221E894EED00328A1E /* ViewController.swift */; };
 		039E63261E894EED00328A1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039E63241E894EED00328A1E /* Main.storyboard */; };
 		039E63281E894EED00328A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 039E63271E894EED00328A1E /* Assets.xcassets */; };
 		039E632B1E894EED00328A1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039E63291E894EED00328A1E /* LaunchScreen.storyboard */; };
+		27F1A460366850EE85594CCE /* Pods_Fruit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7580D28026FB0BE1921915 /* Pods_Fruit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		034CDBBE1E953D61003D8961 /* FruitDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDetailViewController.swift; sourceTree = "<group>"; };
+		035089D61E8961A900742DCE /* FruitEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitEntity.swift; sourceTree = "<group>"; };
+		035089D81E8963B300742DCE /* EntityHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityHelper.swift; sourceTree = "<group>"; };
+		03682B921E8AA0F700E4D0F9 /* CardCollectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionFlowLayout.swift; sourceTree = "<group>"; };
+		03682B941E8AA50700E4D0F9 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		039E631D1E894EED00328A1E /* Fruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		039E63201E894EED00328A1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		039E63221E894EED00328A1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +33,9 @@
 		039E63271E894EED00328A1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		039E632A1E894EED00328A1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		039E632C1E894EED00328A1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		238F8FE5A582FA455DAB67C0 /* Pods-Fruit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fruit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fruit/Pods-Fruit.release.xcconfig"; sourceTree = "<group>"; };
+		54E8CDDC0DA3E33A7596BBEE /* Pods-Fruit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fruit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fruit/Pods-Fruit.debug.xcconfig"; sourceTree = "<group>"; };
+		DE7580D28026FB0BE1921915 /* Pods_Fruit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fruit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F1A460366850EE85594CCE /* Pods_Fruit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		034CDBBD1E953D4E003D8961 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				034CDBBE1E953D61003D8961 /* FruitDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		035089D51E89617B00742DCE /* DataCenter */ = {
+			isa = PBXGroup;
+			children = (
+				035089D61E8961A900742DCE /* FruitEntity.swift */,
+				035089D81E8963B300742DCE /* EntityHelper.swift */,
+			);
+			path = DataCenter;
+			sourceTree = "<group>";
+		};
+		03682B8A1E8A9EF600E4D0F9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				034CDBBD1E953D4E003D8961 /* ViewControllers */,
+				03682B8B1E8A9F1700E4D0F9 /* Cells */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		03682B8B1E8A9F1700E4D0F9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				03682B921E8AA0F700E4D0F9 /* CardCollectionFlowLayout.swift */,
+				03682B941E8AA50700E4D0F9 /* CardCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		039E63141E894EED00328A1E = {
 			isa = PBXGroup;
 			children = (
 				039E631F1E894EED00328A1E /* Fruit */,
 				039E631E1E894EED00328A1E /* Products */,
+				FBBC8497D70F8AFA87DFD578 /* Pods */,
+				99C375F2D276914B80A5EB0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +106,8 @@
 		039E631F1E894EED00328A1E /* Fruit */ = {
 			isa = PBXGroup;
 			children = (
+				03682B8A1E8A9EF600E4D0F9 /* UI */,
+				035089D51E89617B00742DCE /* DataCenter */,
 				039E63201E894EED00328A1E /* AppDelegate.swift */,
 				039E63221E894EED00328A1E /* ViewController.swift */,
 				039E63241E894EED00328A1E /* Main.storyboard */,
@@ -64,6 +118,23 @@
 			path = Fruit;
 			sourceTree = "<group>";
 		};
+		99C375F2D276914B80A5EB0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE7580D28026FB0BE1921915 /* Pods_Fruit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBBC8497D70F8AFA87DFD578 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54E8CDDC0DA3E33A7596BBEE /* Pods-Fruit.debug.xcconfig */,
+				238F8FE5A582FA455DAB67C0 /* Pods-Fruit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 039E632F1E894EED00328A1E /* Build configuration list for PBXNativeTarget "Fruit" */;
 			buildPhases = (
+				3296FF6F8B21F944D37D2343 /* [CP] Check Pods Manifest.lock */,
 				039E63191E894EED00328A1E /* Sources */,
 				039E631A1E894EED00328A1E /* Frameworks */,
 				039E631B1E894EED00328A1E /* Resources */,
+				6F0960A677EE3EADDCC91DAF /* [CP] Embed Pods Frameworks */,
+				42DD48BDEC47214F658E4BF9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +205,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3296FF6F8B21F944D37D2343 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		42DD48BDEC47214F658E4BF9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fruit/Pods-Fruit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F0960A677EE3EADDCC91DAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fruit/Pods-Fruit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		039E63191E894EED00328A1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +260,11 @@
 			files = (
 				039E63231E894EED00328A1E /* ViewController.swift in Sources */,
 				039E63211E894EED00328A1E /* AppDelegate.swift in Sources */,
+				035089D91E8963B300742DCE /* EntityHelper.swift in Sources */,
+				03682B931E8AA0F700E4D0F9 /* CardCollectionFlowLayout.swift in Sources */,
+				03682B951E8AA50700E4D0F9 /* CardCollectionViewCell.swift in Sources */,
+				034CDBBF1E953D61003D8961 /* FruitDetailViewController.swift in Sources */,
+				035089D71E8961A900742DCE /* FruitEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +385,7 @@
 		};
 		039E63301E894EED00328A1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54E8CDDC0DA3E33A7596BBEE /* Pods-Fruit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Fruit/Info.plist;
@@ -270,6 +398,7 @@
 		};
 		039E63311E894EED00328A1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 238F8FE5A582FA455DAB67C0 /* Pods-Fruit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Fruit/Info.plist;
@@ -299,6 +428,7 @@
 				039E63311E894EED00328A1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

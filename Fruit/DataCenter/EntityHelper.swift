@@ -11,12 +11,13 @@ import Alamofire
 
 class EntityHelper {
 
-    class func allFurits(_ succeed:(Any?)->(Void)){
+    class func allFurits(_ succeed:@escaping (AnyObject?)->(Void)){
         Alamofire.request("http://127.0.0.1:8000/getfruits").responseJSON { response in
             print(response.result)   // result of response serialization
         
             if let JSON = response.result.value {
-                print("JSON: \(JSON)")
+//                print("JSON: \(JSON)")
+                succeed(JSON as AnyObject?)
             }
         }
     }

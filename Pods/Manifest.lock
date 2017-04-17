@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (4.4.0)
+  - RxSwift (3.3.1)
+  - SnapKit (3.2.0)
+  - SQLite.swift (0.11.3):
+    - SQLite.swift/standard (= 0.11.3)
+  - SQLite.swift/standard (0.11.3)
+  - StarWars (2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - RxSwift (~> 3.0)
+  - SnapKit (~> 3.2.0)
+  - SQLite.swift
+  - StarWars (~> 2.0)
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SQLite.swift: 99b36c22084427f0abbeb957556ce1528cf10bb3
+  StarWars: 3c68dc5e9f1b6ca6d407b1d4218fd8a65c2eacfa
+
+PODFILE CHECKSUM: afe809c970084e5a7336701d80901eb689c19b30
+
+COCOAPODS: 1.2.0
