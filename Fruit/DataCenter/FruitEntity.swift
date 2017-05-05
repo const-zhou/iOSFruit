@@ -7,28 +7,89 @@
 //
 
 import Foundation
+import ObjectMapper
+import RxSwift
+import RxDataSources
 
-class FruitEntity {
-    var name :String? = String()
-    var description :String? = String()
-    var sectionList:[AnyObject]? = Array()
-    
-    init(){
+class FruitSectionEntity: Mappable{
+    var title :String?
+    var detail :String?
+    var imageUrl :String?
+    var itemType :Int?
+    required init?(map: Map) {
         
     }
     
-    init(dict:[String:AnyObject]) {
-        self.name = dict["name"] as? String
-        self.description = dict["description"] as? String
-        self.sectionList = dict["section_list"] as? Array
+    func mapping(map: Map) {
+        title     <- map["section"]
+        detail    <- map["content"]
+        itemType  <- map["itemType"]
+        imageUrl  <- map["image"]
+    }
+}
+
+class FruitEntity: Mappable {
+    var name :String? = String()
+    var description :String? = String()
+    var sectionList:[FruitSectionEntity]?
+    
+    required init?(map: Map) {
+        
     }
     
-    func convert2Dictionary() -> [String:AnyObject]{
-        return ["name":self.name! as AnyObject,
-                "description":self.description! as AnyObject,
-                "sectionList":self.sectionList! as AnyObject
-        ]
+    func mapping(map: Map) {
+        name        <- map["name"]
+        description <- map["description"]
+        sectionList <- map["section_list"]
     }
-    
     
 }
+extension FruitEntity: Equatable{
+    public static func ==(lhs: FruitEntity, rhs: FruitEntity) -> Bool{
+        return lhs.name == rhs.name
+    }
+}
+
+struct SectionOfFruitData {
+    var header : String
+    var items : [FruitEntity]
+}
+
+extension SectionOfFruitData : SectionModelType{
+    init(original: SectionOfFruitData, items: [SectionOfFruitData.Item]) {
+        self = original
+        self.items = items
+    }
+}
+
+
+
+extension Observable{
+    func mapObject<T: Mappable>(type: T.Type) -> Observable<T>{
+        return self.observeOn(SerialDispatchQueueScheduler.init(qos: .background)).map{ response -> T in
+            guard let dict = response as? [String: Any] else{
+                throw RxSwiftMoyaError.ParseJSONError
+            }
+            return Mapper<T>().map(JSON: dict)!
+        }.observeOn(MainScheduler.instance)
+    }
+    
+    func mapArray<T: Mappable>(type: T.Type) -> Observable<[T]>{
+        return self.observeOn(SerialDispatchQueueScheduler.init(qos: .background)).map{ response in
+            guard let array = response as? [Any] else{
+                throw RxSwiftMoyaError.ParseJSONError
+            }
+            guard let dicts = array as? [[String: Any]] else{
+                throw RxSwiftMoyaError.ParseJSONError
+            }
+            return Mapper<T>().mapArray(JSONArray: dicts)!
+        }.observeOn(MainScheduler.instance)
+    }
+}
+
+enum RxSwiftMoyaError: String{
+    case ParseJSONError
+    case OtherError
+}
+
+extension RxSwiftMoyaError: Swift.Error{}

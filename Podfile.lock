@@ -1,26 +1,57 @@
 PODS:
   - Alamofire (4.4.0)
-  - RxSwift (3.3.1)
+  - Moya/Core (8.0.3):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (8.0.3):
+    - Moya/Core
+    - RxSwift (~> 3.0)
+  - ObjectMapper (2.2.6)
+  - Result (3.2.1)
+  - RxAlamofire (3.0.2):
+    - RxAlamofire/Core (= 3.0.2)
+  - RxAlamofire/Core (3.0.2):
+    - Alamofire (~> 4.0)
+    - RxSwift (~> 3.0)
+  - RxCocoa (3.4.1):
+    - RxSwift (~> 3.4)
+  - RxDataSources (1.0.3):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
+  - RxSwift (3.4.1)
   - SnapKit (3.2.0)
   - SQLite.swift (0.11.3):
     - SQLite.swift/standard (= 0.11.3)
   - SQLite.swift/standard (0.11.3)
   - StarWars (2.0)
+  - TransitionTreasury (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - Moya/RxSwift
+  - ObjectMapper
+  - RxAlamofire
+  - RxDataSources
   - RxSwift (~> 3.0)
   - SnapKit (~> 3.2.0)
   - SQLite.swift
   - StarWars (~> 2.0)
+  - TransitionTreasury
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
+  Moya: d3721622e3cc0cc2f038d69a258686f0b66e7252
+  ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
+  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
+  RxAlamofire: bc53604b29fd2d220cfaa490c736cc4500819f34
+  RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
+  RxDataSources: a021a0e944ba5f7991259829d973afdbfa719c0b
+  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SQLite.swift: 99b36c22084427f0abbeb957556ce1528cf10bb3
   StarWars: 3c68dc5e9f1b6ca6d407b1d4218fd8a65c2eacfa
+  TransitionTreasury: dcf3fe6e5c740525d9e7d4544af45e6fbfd71c88
 
-PODFILE CHECKSUM: afe809c970084e5a7336701d80901eb689c19b30
+PODFILE CHECKSUM: b9f3598cb60cd179fc7d454a4cb129de2b9dd2dc
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

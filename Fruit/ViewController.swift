@@ -8,11 +8,30 @@
 
 import UIKit
 import SnapKit
+import Moya
+import RxSwift
+import RxDataSources
+import RxCocoa
+
+//private typealias FruitSectionModel = AnimatableSectionModel<String, FruitEntity>
 
 class ViewController: UIViewController {
     let flowLayout = CardCollectionFlowLayout.init()
     lazy var collectionView = UICollectionView()
     var dataArray:[String] = []
+    var disposeBag : DisposeBag = DisposeBag()
+    let viewModel = {
+        return FruitViewModel()
+    }()
+    
+    lazy var tableView = { () -> UITableView in 
+        let tableView = UITableView.init()
+        tableView.delegate = nil
+        tableView.dataSource = nil
+        return tableView
+    }()
+    
+    private let dataSource = RxTableViewSectionedReloadDataSource<SectionOfFruitData>()
     
     func initDataArray() -> [String] {
         if dataArray.count > 0 {
@@ -25,17 +44,16 @@ class ViewController: UIViewController {
         return dataArray
     }
     
-    
+//    var dataSource : Variable<Any>
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        EntityHelper.allFurits { (fruits) -> (Void) in
-            if fruits is Array<AnyObject>{
-                let fruitInfo = fruits![0] as! [String:AnyObject]
-                let fruit = FruitEntity.init(dict: fruitInfo)
-                print(fruit.convert2Dictionary())
-            }
-        }
+        
+        let provider = RxMoyaProvider<FruitService>()
+        _ = provider.request(.allFruts).filterSuccessfulStatusCodes().mapJSON().mapArray(type: FruitEntity.self)
+            .subscribe(onNext: {(entitys : [FruitEntity]) in
+                print(entitys.count)
+        })
+        
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         self.view.addSubview(collectionView)
         collectionView.dataSource = self
@@ -47,10 +65,31 @@ class ViewController: UIViewController {
             make.height.equalTo(180)
         }
         
-        collectionView.register(CardCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "cardCell")
+        self.view.addSubview(self.tableView)
+        self.tableView.snp.makeConstraints { (make) in
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.top.equalTo(collectionView.snp.bottom).offset(40)
+            make.bottom.equalToSuperview()
+        }
         
+        collectionView.register(CardCollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "cardCell")
+        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "baseCell")
         dataArray = initDataArray()
         self.collectionView.reloadData()
+        
+        
+        dataSource.configureCell = { (dataSource, tableView, IndexPath, element) in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "baseCell")!
+            cell.textLabel?.text = element.name
+            cell.detailTextLabel?.text = element.description
+            return cell
+        }
+        dataSource.canEditRowAtIndexPath = {_ in true}
+        
+        viewModel.allFruits().map{[SectionOfFruitData(header: "", items: $0)]}
+            .bind(to: tableView.rx.items(dataSource: dataSource)).addDisposableTo(disposeBag)
+        
     }
 
     override func didReceiveMemoryWarning() {

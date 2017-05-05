@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030DEE731EBADCAB00CCF475 /* FuritService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030DEE721EBADCAB00CCF475 /* FuritService.swift */; };
+		030DEE761EBB1BFF00CCF475 /* FruitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030DEE751EBB1BFF00CCF475 /* FruitViewModel.swift */; };
 		034CDBBF1E953D61003D8961 /* FruitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034CDBBE1E953D61003D8961 /* FruitDetailViewController.swift */; };
 		035089D71E8961A900742DCE /* FruitEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035089D61E8961A900742DCE /* FruitEntity.swift */; };
 		035089D91E8963B300742DCE /* EntityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035089D81E8963B300742DCE /* EntityHelper.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030DEE721EBADCAB00CCF475 /* FuritService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuritService.swift; sourceTree = "<group>"; };
+		030DEE751EBB1BFF00CCF475 /* FruitViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitViewModel.swift; sourceTree = "<group>"; };
 		034CDBBE1E953D61003D8961 /* FruitDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDetailViewController.swift; sourceTree = "<group>"; };
 		035089D61E8961A900742DCE /* FruitEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitEntity.swift; sourceTree = "<group>"; };
 		035089D81E8963B300742DCE /* EntityHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityHelper.swift; sourceTree = "<group>"; };
@@ -50,6 +54,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		030DEE711EBADC6E00CCF475 /* NetworkServer */ = {
+			isa = PBXGroup;
+			children = (
+				030DEE721EBADCAB00CCF475 /* FuritService.swift */,
+			);
+			path = NetworkServer;
+			sourceTree = "<group>";
+		};
+		030DEE741EBB1AB200CCF475 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				030DEE751EBB1BFF00CCF475 /* FruitViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		034CDBBD1E953D4E003D8961 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +81,7 @@
 		035089D51E89617B00742DCE /* DataCenter */ = {
 			isa = PBXGroup;
 			children = (
+				030DEE711EBADC6E00CCF475 /* NetworkServer */,
 				035089D61E8961A900742DCE /* FruitEntity.swift */,
 				035089D81E8963B300742DCE /* EntityHelper.swift */,
 			);
@@ -70,6 +91,7 @@
 		03682B8A1E8A9EF600E4D0F9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				030DEE741EBB1AB200CCF475 /* ViewModel */,
 				034CDBBD1E953D4E003D8961 /* ViewControllers */,
 				03682B8B1E8A9F1700E4D0F9 /* Cells */,
 			);
@@ -218,7 +240,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		42DD48BDEC47214F658E4BF9 /* [CP] Copy Pods Resources */ = {
@@ -258,6 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030DEE731EBADCAB00CCF475 /* FuritService.swift in Sources */,
+				030DEE761EBB1BFF00CCF475 /* FruitViewModel.swift in Sources */,
 				039E63231E894EED00328A1E /* ViewController.swift in Sources */,
 				039E63211E894EED00328A1E /* AppDelegate.swift in Sources */,
 				035089D91E8963B300742DCE /* EntityHelper.swift in Sources */,
