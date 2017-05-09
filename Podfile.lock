@@ -19,6 +19,9 @@ PODS:
     - RxCocoa (~> 3.0)
     - RxSwift (~> 3.0)
   - RxSwift (3.4.1)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - SnapKit (3.2.0)
   - SQLite.swift (0.11.3):
     - SQLite.swift/standard (= 0.11.3)
@@ -33,6 +36,7 @@ DEPENDENCIES:
   - RxAlamofire
   - RxDataSources
   - RxSwift (~> 3.0)
+  - SDWebImage (~> 3.8)
   - SnapKit (~> 3.2.0)
   - SQLite.swift
   - StarWars (~> 2.0)
@@ -47,11 +51,12 @@ SPEC CHECKSUMS:
   RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
   RxDataSources: a021a0e944ba5f7991259829d973afdbfa719c0b
   RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SQLite.swift: 99b36c22084427f0abbeb957556ce1528cf10bb3
   StarWars: 3c68dc5e9f1b6ca6d407b1d4218fd8a65c2eacfa
   TransitionTreasury: dcf3fe6e5c740525d9e7d4544af45e6fbfd71c88
 
-PODFILE CHECKSUM: b9f3598cb60cd179fc7d454a4cb129de2b9dd2dc
+PODFILE CHECKSUM: 190a69ca4b64eaa2cc8449b8a6bced46c78a87a7
 
 COCOAPODS: 1.2.1

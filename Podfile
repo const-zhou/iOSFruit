@@ -13,4 +13,5 @@ pod 'RxDataSources'
 pod 'Moya/RxSwift'
 pod 'ObjectMapper'
 pod 'TransitionTreasury'
+pod 'SDWebImage', '~>3.8'
 end

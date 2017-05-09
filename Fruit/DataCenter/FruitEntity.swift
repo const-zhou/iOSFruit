@@ -31,16 +31,33 @@ class FruitSectionEntity: Mappable{
 class FruitEntity: Mappable {
     var name :String? = String()
     var description :String? = String()
+    var imageUrl :String? = String()
     var sectionList:[FruitSectionEntity]?
     
     required init?(map: Map) {
         
     }
     
+    init() {
+        
+    }
+    
+    func fruitImageUrl() -> String? {
+//        let contentImageEntityArray = sectionList?.filter({ (entity) -> Bool in
+//            return (entity.imageUrl != nil)
+//        })
+//        if (contentImageEntityArray?.count)! > 0 {
+//            return contentImageEntityArray![0].imageUrl!
+//        }
+//        return ""
+        return imageUrl
+    }
+    
     func mapping(map: Map) {
         name        <- map["name"]
         description <- map["description"]
         sectionList <- map["section_list"]
+        imageUrl    <- map["imageUrl"]
     }
     
 }
